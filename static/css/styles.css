@@ -1,0 +1,201 @@
+body{
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center 0;
+}
+
+.container{
+    margin-top: 4rem;
+}
+
+h1{
+    
+    text-align: center;
+    color:white !important
+}
+
+hr{
+    color:white;
+}
+
+.form-label{
+    color:rgb(75, 113, 179)
+}
+
+.form-check-label{
+    color:rgb(75, 113, 179)
+}
+
+
+.search {
+  font-size:17px;
+  font-family:Arial;
+  width:93px;
+  height:47px;
+  border-width:1px;
+  color:#fff;
+  border-color:#d0451b;
+  border-top-left-radius:12px;
+  border-top-right-radius:12px;
+  border-bottom-left-radius:12px;
+  border-bottom-right-radius:12px;
+  box-shadow:inset 0px 1px 0px 0px rgba(170, 107, 0, 0.71);
+  text-shadow:inset 0px -17px 50px #854629;
+  background:linear-gradient(#d0451b, rgba(208, 66, 27, 1));
+}
+
+.search:hover {
+  background: linear-gradient(rgba(208, 66, 27, 1), #d0451b);
+}
+    
+
+.clear {
+  font-size:17px;
+  font-family:Arial;
+  width:93px;
+  height:47px;
+  border-width:1px;
+  color:#ffffff;
+  border-color:rgba(31, 73, 134, 1);
+  font-weight:bold;
+  border-top-left-radius:12px;
+  border-top-right-radius:12px;
+  border-bottom-left-radius:12px;
+  border-bottom-right-radius:12px;
+  box-shadow:inset 0px 1px 0px 0px #97c4fe;
+  text-shadow:inset 0px 1px 0px #1570cd;
+  background:linear-gradient(#3d94f6, #1e62d0);
+}
+
+.clear:hover {
+  background: linear-gradient(#1e62d0, #3d94f6);
+}
+
+#result{
+    background-color: white;
+    text-align: center;
+    width: 1200px;
+    margin: 20px auto;
+}
+table{
+  width: 100%;
+}
+
+td,th{
+    border: 1px solid #666 !important
+}
+td{
+    padding: 8px 15px;
+    width: 20%;
+}
+td:first-child{
+    width: 150px;
+}
+th{
+    background-color: #eee;
+    padding: 8px 15px;
+}
+table img{
+    height: 80px;
+}
+#detail{
+    width: 1000px;
+    margin: 20px auto;
+    display: none;
+}
+.detail{
+    width: 960px;
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+}
+.detail h2{
+    color: white;
+    text-align: center;
+    line-height: 80px;
+}
+.detailall{
+    display: flex;
+    justify-content: space-between;
+}
+.detailmessage{
+    width: 400px;
+}
+.info{
+    height: 65px;
+}
+.info h4{
+    color: aquamarine;
+    line-height: 30px;
+}
+.info p{
+    color: white;
+}
+.info a{
+    text-decoration: none;
+}
+#detailart,#detailbuy{
+    color: cornflowerblue;
+}
+#detailticket{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: green;
+}
+.detailimg{
+    width: 500px;
+}
+.detailimg img{
+    max-height: 400px;
+    max-width: 400px;
+}
+#venueshow{
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+}
+#venue{
+    width: 960px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+}
+.venue{
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+}
+.venuetitle{
+    text-align: center;
+    padding: 15px 0;
+}
+.venuetitle p{
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bold;
+}
+.venuedetail{
+    display: flex;
+}
+.venueleft{
+    width: 50%;
+    text-align: center;
+    border-right: 1px solid #666;
+}
+.venueright{
+    width: 50%;
+    text-align: center;
+}
+.venue a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.venueshow{
+    cursor: pointer;
+}
+              
+              
+              
+
