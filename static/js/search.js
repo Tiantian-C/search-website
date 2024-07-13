@@ -178,10 +178,10 @@ async function eventsDetail(id) {
   let url = "/detail?id=" + id;
   let res = await fetch(url, { method: "get" });
   let response = await res.json();
-  //console.log(response);
+
   document.querySelector("#detailname").innerHTML = response.name;
   document.querySelector("#detaildate").innerHTML =
-    response.dates.start.localDate + response.dates.start.localTime;
+    response.dates.start.localDate + " " + response.dates.start.localTime;
   if ("attractions" in response) {
     document.querySelector("#showart").style.display = "block";
     document.querySelector("#detailart").innerHTML =
@@ -195,23 +195,38 @@ async function eventsDetail(id) {
   document.querySelector("#detailvenue").innerHTML =
     response._embedded.venues[0].name;
 
-  let detailgenres = "";
-  if ("subGenre" in response.classifications[0]) {
-    detailgenres += response.classifications[0].subGenre.name + "|";
+  let detailgenres = [];
+  const classifications = response.classifications[0];
+
+  if (
+    "subGenre" in classifications &&
+    classifications.subGenre.name !== "Undefined"
+  ) {
+    detailgenres.push(classifications.subGenre.name);
   }
-  if ("genre" in response.classifications[0]) {
-    detailgenres += response.classifications[0].genre.name + "|";
+  if (
+    "genre" in classifications &&
+    classifications.genre.name !== "Undefined"
+  ) {
+    detailgenres.push(classifications.genre.name);
   }
-  if ("segment" in response.classifications[0]) {
-    detailgenres += response.classifications[0].segment.name + "|";
+  if (
+    "segment" in classifications &&
+    classifications.segment.name !== "Undefined"
+  ) {
+    detailgenres.push(classifications.segment.name);
   }
-  if ("subType" in response.classifications[0]) {
-    detailgenres += response.classifications[0].subType.name + "|";
+  if (
+    "subType" in classifications &&
+    classifications.subType.name !== "Undefined"
+  ) {
+    detailgenres.push(classifications.subType.name);
   }
-  if ("type" in response.classifications[0]) {
-    detailgenres += response.classifications[0].type.name;
+  if ("type" in classifications && classifications.type.name !== "Undefined") {
+    detailgenres.push(classifications.type.name);
   }
-  document.querySelector("#detailgenres").innerHTML = detailgenres;
+
+  document.querySelector("#detailgenres").innerHTML = detailgenres.join(" | ");
 
   if ("priceRanges" in response) {
     document.querySelector("#showprice").style.display = "block";
