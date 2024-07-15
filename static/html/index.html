@@ -24,11 +24,13 @@
     <div class="container">
       <form action="" method="get" onsubmit="return false">
         <div class="form">
-          <h1>Event Search</h1>
+          <h1>Events Search</h1>
           <div class="row mt-5">
             <div class="col-3"></div>
             <div class="col-6">
-              <label for="keyword" class="form-label">Keyword</label>
+              <label for="keyword" class="form-label"
+                >Keyword<sup>*</sup></label
+              >
               <input type="text" id="keyword" class="form-control" required />
             </div>
             <div class="col-3"></div>
@@ -38,11 +40,13 @@
             <div class="col-3"></div>
             <div class="col-3">
               <label for="distance" class="form-label">Distance(miles)</label>
-              <input type="text" id="distance" class="form-control" required />
+              <input type="text" id="distance" class="form-control" />
             </div>
             <div class="col-3">
-              <label for="category" class="form-label">Category</label>
-              <select class="form-select" id="category">
+              <label for="category" class="form-label"
+                >Category<sup>*</sup></label
+              >
+              <select class="form-select custom-select" id="category">
                 <option selected value="Default">Default</option>
                 <option value="Music">Music</option>
                 <option value="Sports">Sports</option>
@@ -57,9 +61,11 @@
           <div class="row">
             <div class="col-3"></div>
             <div class="col-6">
-              <label for="location" class="form-label">Location</label>
+              <label for="location" class="form-label"
+                >Location<sup>*</sup></label
+              >
               <input
-                class="form-check-input"
+                class="form-check-input margin-left"
                 type="checkbox"
                 value=""
                 id="detectlocation"
@@ -83,9 +89,12 @@
                 onclick="onSubmit()"
                 value="SUBMIT"
               />
-              <button type="reset" class="clear" onclick="onClear()">
-                CLEAR
-              </button>
+              <input
+                type="reset"
+                class="clear"
+                onclick="onClear()"
+                value="CLEAR"
+              />
             </div>
           </div>
         </div>
@@ -159,7 +168,9 @@
             </div>
             <div class="venueright">
               <p>
-                <a href="" id="venueall" target="_blank">More events at this venue</a>
+                <a href="" id="venueall" target="_blank"
+                  >More events at this venue</a
+                >
               </p>
             </div>
           </div>
