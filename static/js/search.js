@@ -265,6 +265,7 @@ async function eventsDetail(id) {
 }
 
 function venueshowfill(venuelist) {
+  venueshow.style.display = "block"; // 隐藏venuebutton
   let venuebutton =
     "<div class='venueshow' onclick='venuelist(\"" +
     venuelist +
@@ -276,6 +277,7 @@ function venueshowfill(venuelist) {
 }
 
 function venuelist(venuelist) {
+  venueshow.style.display = "none"; // 隐藏venuebutton
   venuepage.style.display = "block";
   let url = "/venue?keyword=" + venuelist;
   fetch(url, {
