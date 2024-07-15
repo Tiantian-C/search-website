@@ -182,7 +182,9 @@ async function eventsDetail(id) {
   document.querySelector("#detailname").innerHTML = response.name;
   document.querySelector("#detaildate").innerHTML =
     response.dates.start.localDate + " " + response.dates.start.localTime;
-  if ("attractions" in response) {
+
+  // Artist
+  if (response._embedded.attractions) {
     document.querySelector("#showart").style.display = "block";
     document.querySelector("#detailart").innerHTML =
       response._embedded.attractions[0].name;

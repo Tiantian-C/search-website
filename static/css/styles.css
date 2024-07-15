@@ -45,6 +45,9 @@ input[type="text"]:focus {
   background-color: transparent !important;
   color: white !important;
 }
+select[editable] > button {
+  stroke: white !important;
+}
 
 .search {
   font-size: 17px;
