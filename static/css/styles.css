@@ -119,6 +119,17 @@ th {
 table img {
   height: 80px;
 }
+.detail-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.detail-link:hover {
+  color: plum;
+}
+
 #detail {
   width: 1000px;
   margin: 20px auto;

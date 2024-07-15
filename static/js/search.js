@@ -121,7 +121,7 @@ function datafill(datalist) {
       "'>" +
       "</td>" +
       "<td>" +
-      "<a onclick='eventsDetail(\"" +
+      "<a class='detail-link' onclick='eventsDetail(\"" +
       datalist[i].id +
       "\")'>" +
       datalist[i].name +
